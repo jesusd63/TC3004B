@@ -55,6 +55,5 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
-          ls
-          liquibase status --username=$DB_USER --password=$DB_PASSWORD --url=jdbc:oracle:thin:@dev_high?TNS_ADMIN=/oracle --changelog-file=changelog.json
+          liquibase status --username=$DB_USER --password=$DB_PASSWORD --url=jdbc:oracle:thin:@dev?TNS_ADMIN=/oracle --changelog-file=changelog.json
           
